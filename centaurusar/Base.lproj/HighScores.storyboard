@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zwW-fE-Nv0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--High Scores View Controller-->
+        <scene sceneID="dLW-Lz-QgQ">
+            <objects>
+                <viewController id="zwW-fE-Nv0" customClass="HighScoresViewController" customModule="centaurusar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3E-8V-3Uh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-KN-C5N">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="High Scores!" id="FBn-JM-jLO">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="A0W-G5-5k4">
+                                            <connections>
+                                                <segue destination="LQN-Gf-Eya" kind="popoverPresentation" popoverAnchorBarButtonItem="A0W-G5-5k4" id="6Pb-Y8-WZ3">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xFt-lS-ZFy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hsCell" id="Eip-pE-19p">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eip-pE-19p" id="WBI-Fy-exu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zwW-fE-Nv0" id="vOD-cO-gnj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xFt-lS-ZFy" firstAttribute="top" secondItem="2vJ-KN-C5N" secondAttribute="bottom" id="80M-nk-gUD"/>
+                            <constraint firstAttribute="trailing" secondItem="2vJ-KN-C5N" secondAttribute="trailing" id="aFB-de-A8e"/>
+                            <constraint firstItem="2vJ-KN-C5N" firstAttribute="leading" secondItem="i3E-8V-3Uh" secondAttribute="leading" id="aj0-Yx-LOg"/>
+                            <constraint firstItem="xFt-lS-ZFy" firstAttribute="leading" secondItem="2vJ-KN-C5N" secondAttribute="leading" id="gNS-MJ-EoE"/>
+                            <constraint firstItem="2vJ-KN-C5N" firstAttribute="top" secondItem="mba-Tp-WTH" secondAttribute="top" id="iNd-Fh-S7Q"/>
+                            <constraint firstItem="xFt-lS-ZFy" firstAttribute="bottom" secondItem="mba-Tp-WTH" secondAttribute="bottom" id="sEU-Ui-t2D"/>
+                            <constraint firstItem="xFt-lS-ZFy" firstAttribute="trailing" secondItem="2vJ-KN-C5N" secondAttribute="trailing" id="waC-0F-ikY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mba-Tp-WTH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="byw-RU-ToQ"/>
+                    <connections>
+                        <outlet property="table" destination="xFt-lS-ZFy" id="I3H-Uc-kIM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bd-ls-igr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2292" y="-369.26536731634184"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="r6c-ih-FAI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="First" id="LQN-Gf-Eya" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQe-Mg-v8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1662" y="-370"/>
+        </scene>
+    </scenes>
+</document>
